@@ -1,7 +1,32 @@
 % !TeX spellcheck = russian-aot-ieyo
 \documentclass[a4paper,14pt,russian,oneside]{extreport}
 
-% Добавляет поддержу дополнительных размеров текста 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, and 20pt.
-% Документация: http://ctan.vgtu.lt/macros/latex/contrib/extsizes/extsizes.pdf
+% Зачем: Установка кодировки исходных файлов
+\usepackage[utf8]{inputenc}
+
+% Зачем: Выбор внутренней TeX кодировки
+\usepackage[T2A]{fontenc}
+
+% Зачем: Чтобы можно было использовать русские буквы в формулах, но в случае использования предупреждать об этом
+\usepackage[warn]{mathtext}
+
+% Зачем: Учет особенностей различных языков
+\usepackage[russian]{babel}
+
+% Зачем: Делает результирующий PDF "searchable and copyable"
+\usepackage{cmap}
+
+% Зачем: Улучшает отображение русских шрифтов.
+% Примечание: Требует шаманства при установке, инструкция http://plumbum-blog.blogspot.com/2010/06/miktex-28-pscyr-04d.html
+\usepackage{pscyr}
+
+
+% Зачем: Добавляет поддержу дополнительных размеров текста 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, and 20pt.
 % Требования: Пункт 2.1.1 Требований по оформлению пояснительной записки
 \usepackage{extsizes}
+
+% Зачем: Добавляет отступы для абзацев
+% Требования: Пункт 2.1.3 Требований по оформлению пояснительной записки
+\usepackage{indentfirst}
+\parindent=2.8em % Примерно соответсвует 5 символам
+
