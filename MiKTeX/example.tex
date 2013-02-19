@@ -4,7 +4,7 @@
 \input{document_specific}
 
 \tableofcontents
-\pagebreak
+\newpage
 
 
 %\section{Пояснительную  записку  выполняют  рукописным  способом  или  с применением печатающих и графических устройств вывода ЭВМ}
@@ -78,19 +78,37 @@ Hello \rule[-2pt]{1cm}{3pt} World!\\
 
 % Примеры разделов
 \section*{Введение}
+\label{sec:intro}
 \addcontentsline{toc}{section}{Введение} \pagebreak
+
 \section{Анализ нескорректированной системы управления} \pagebreak
+\label{sec:analysys_equations}
+
 \subsection{Анализ исходных данных} \pagebreak 
+\label{sec:analysys_data}
+
 \subsection{Статические и динамические характеристики элементов системы} \pagebreak 
+\label{sec:stat_and_dyn}
+
 \subsection{Структурная схема нескорректированной системы} \pagebreak 
+\label{sec:str_schema}
+
 \subsection{Определение желаемого коэффициента усиления разомкнутой системы} \pagebreak 
+\label{sec:determ_factor}
+
 \subsection{Анализ устойчивости} \pagebreak 
+\label{sec:analysys_rob}
+
 \subsection{Выводы} \pagebreak 
+\label{sec:conclusion}
+
 \subsubsection{Пункт подраздела, не должен появится в содержании} \pagebreak
 \section{Синтез корректирующих устройств} \pagebreak
 \section*{Приложение А (информационное)  Пример заполнения титульного листа} 
 \addcontentsline{toc}{section}{Приложение А (информационное)  Пример заполнения титульного листа} \pagebreak
 
+Смотри страницу \pageref{sec:analysys_data} анализа данных
+это раздел \ref{sec:analysys_data}
 
 \begin{thebibliography}{99}
 \end{thebibliography}
