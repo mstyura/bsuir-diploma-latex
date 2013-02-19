@@ -28,10 +28,16 @@
 \usepackage{extsizes}
 
 
+% Зачем: Длинна, пимерно соответвующая 5 символам
+% Почему: Требования содержат странное требование про отсупы в 5 символов (для немоноширинного шрифта :| )
+\newlength{\fivecharsapprox}
+\setlength{\fivecharsapprox}{6ex}
+
+
 % Зачем: Добавляет отступы для абзацев.
 % Почему: Пункт 2.1.3 Требований по оформлению пояснительной записки.
 \usepackage{indentfirst}
-\parindent=6ex % Примерно соответсвует 5 символам.
+\setlength{\parindent}{\fivecharsapprox} % Примерно соответсвует 5 символам.
 
 
 % Зачем: Настраивает отступы от границ страницы.
@@ -117,11 +123,32 @@
 
 
 % Зачем: Задает стиль заголовков раздела жирным шрифтом, прописными буквами, без точки в конце
-% Почему: Пункты 2.1.1 и 2.2.5 Требований по оформлению пояснительной записки.
+% Почему: Пункты 2.1.1, 2.2.5 и ПРИЛОЖЕНИЕ Л Требований по оформлению пояснительной записки.
 \makeatletter
 \renewcommand\section{%
-  \@startsection {section}{1}{\z@}%
-     {-3.5ex \@plus -1ex \@minus -.2ex}%
-     {2.3ex \@plus.2ex}%
-     {\normalfont\large\bfseries\MakeUppercase}}
+  \@startsection {section}{1}%
+    {\fivecharsapprox}%
+    {-3.5ex \@plus -1ex \@minus -.2ex}%
+    {2.3ex \@plus.2ex}%
+    {\normalfont\large\bfseries\MakeUppercase}}
+\makeatother
+
+% Зачем: Задает стиль заголовков подразделов
+\makeatletter
+\renewcommand\subsection{%
+  \@startsection{subsection}{2}%
+    {\fivecharsapprox}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\normalfont\large\bfseries}}
+\makeatother
+
+% Зачем: Задает стиль заголовков пунктов
+\makeatletter
+\renewcommand\subsubsection{
+  \@startsection{subsubsection}{3}%
+    {\fivecharsapprox}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\normalfont\normalsize\bfseries}}
 \makeatother
