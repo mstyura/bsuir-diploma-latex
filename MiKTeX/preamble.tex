@@ -74,15 +74,27 @@
 \makeatother
 
 
-% Зачем: Определяет отступы в содержаии
+% Зачем: Переопределяем стандартную нумерацию, т.к. в отчете будут только section и т.д. в терминологии TeX
+\makeatletter
+\renewcommand{\thesection}{\arabic{section}}
+\makeatother
+
+
+% Зачем: Пункты (в терминологии требований) в терминологии TeX subsubsection должны нумероваться
+% Почему: Пункт 2.2.3 Требований по оформлению пояснительной записки.
+\setcounter{secnumdepth}{3}
+
+
+% Зачем: Настраивает отступ между таблицей с содержанимем и словом СОДЕРЖАНИЕ
+% Почему: Пункт 2.2.7 Требований по оформлению пояснительной записки.
+\usepackage{tocloft}
+\setlength{\cftbeforetoctitleskip}{-1em}
+\setlength{\cftaftertoctitleskip}{1em}
+
+
+% Зачем: Определяет отступы слева для записей в таблице содержания.
 % Почему: Пункт 2.2.7 Требований по оформлению пояснительной записки.
 \makeatletter
 \renewcommand{\l@section}{\@dottedtocline{1}{0.5em}{1.2em}}
 \renewcommand{\l@subsection}{\@dottedtocline{2}{1.7em}{2.0em}}
-\makeatother
-
-
-% Зачем: Переопределяем стандартную нумерацию, т.к. в отчете будут только section и т.д. в терминологии TeX
-\makeatletter
-\renewcommand{\thesection}{\arabic{section}}
 \makeatother
