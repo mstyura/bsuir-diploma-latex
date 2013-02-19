@@ -80,6 +80,11 @@
 \makeatother
 
 
+% Зачем: Расположение сносок внизу страницы
+% Почему: Пункт 2.9.2 Требований по оформлению пояснительной записки.
+\usepackage[bottom]{footmisc}
+
+
 % Зачем: Переопределяем стандартную нумерацию, т.к. в отчете будут только section и т.д. в терминологии TeX
 \makeatletter
 \renewcommand{\thesection}{\arabic{section}}
@@ -133,7 +138,9 @@
     {\raggedright\hyphenpenalty=10000\normalfont\large\bfseries\MakeUppercase}}
 \makeatother
 
+
 % Зачем: Задает стиль заголовков подразделов
+% Почему: Пункты 2.1.1, 2.2.5 и ПРИЛОЖЕНИЕ Л Требований по оформлению пояснительной записки.
 \makeatletter
 \renewcommand\subsection{%
   \@startsection{subsection}{2}%
@@ -143,7 +150,9 @@
     {\raggedright\hyphenpenalty=10000\normalfont\large\bfseries}}
 \makeatother
 
+
 % Зачем: Задает стиль заголовков пунктов
+% Почему: Пункты 2.1.1, 2.2.5 и ПРИЛОЖЕНИЕ Л Требований по оформлению пояснительной записки.
 \makeatletter
 \renewcommand\subsubsection{
   \@startsection{subsubsection}{3}%
@@ -152,3 +161,5 @@
     {\z@}%
     {\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
 \makeatother
+
+
