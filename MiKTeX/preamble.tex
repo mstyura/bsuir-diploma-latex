@@ -98,3 +98,19 @@
 \renewcommand{\l@section}{\@dottedtocline{1}{0.5em}{1.2em}}
 \renewcommand{\l@subsection}{\@dottedtocline{2}{1.7em}{2.0em}}
 \makeatother
+
+
+% Зачем: Работа с колонтитулами
+\usepackage{fancyhdr} % пакет для установки колонтитулов
+\pagestyle{fancy} % смена стиля оформления страниц
+
+
+% Зачем: Нумерация страниц располагается справа снизу страницы
+% Почему: Пункт 2.2.8 Требований по оформлению пояснительной записки.
+\fancyhf{} % очистка текущих значений
+\fancyfoot[R]{\thepage} % установка верхнего колонтитула
+\renewcommand{\footrulewidth}{0pt} % убрать разделительную линию внизу страницы
+\renewcommand{\headrulewidth}{0pt} % убрать разделительную линию вверху страницы
+\fancypagestyle{plain}{ 
+    \fancyhf{}
+    \rfoot{\thepage}}
