@@ -114,3 +114,14 @@
 \fancypagestyle{plain}{ 
     \fancyhf{}
     \rfoot{\thepage}}
+
+
+% Зачем: Задает стиль заголовков раздела жирным шрифтом, прописными буквами, без точки в конце
+% Почему: Пункты 2.1.1 и 2.2.5 Требований по оформлению пояснительной записки.
+\makeatletter
+\renewcommand\section{%
+  \@startsection {section}{1}{\z@}%
+     {-3.5ex \@plus -1ex \@minus -.2ex}%
+     {2.3ex \@plus.2ex}%
+     {\normalfont\large\bfseries\MakeUppercase}}
+\makeatother
