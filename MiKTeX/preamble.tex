@@ -131,11 +131,11 @@
 % Почему: Пункты 2.1.1, 2.2.5, 2.2.6 и ПРИЛОЖЕНИЕ Л Требований по оформлению пояснительной записки.
 \makeatletter
 \renewcommand\section{%
-  \@startsection {section}{1}%
+  \clearpage\@startsection {section}{1}%
     {\fivecharsapprox}%
     {-1em \@plus -1ex \@minus -.2ex}%
     {1em \@plus .2ex}%
-    {\newpage\raggedright\hyphenpenalty=10000\normalfont\large\bfseries\MakeUppercase}}
+    {\raggedright\hyphenpenalty=10000\normalfont\large\bfseries\MakeUppercase}}
 \makeatother
 
 
@@ -161,5 +161,3 @@
     {\z@}%
     {\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
 \makeatother
-
-
