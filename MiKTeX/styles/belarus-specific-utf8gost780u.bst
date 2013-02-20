@@ -494,7 +494,7 @@ FUNCTION {bbl.ppages}%    { "\bblPp." }
 {  curlanguage "english" =
     {"Pp."}
     { curlanguage "ukrainian" = curlanguage "russian" = or
-           {"{С.}"}
+           {"{c.}"}
            {"language is not defined: " language  "Pp." * * warning$ "Pp."}
       if$}
   if$
@@ -1404,7 +1404,7 @@ FUNCTION {begin.bib}
   "\ifx\undefined\url\def\url#1{{\small #1}}\else\fi"                  write$ newline$
   "\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi"   write$ newline$
   "\ifx\undefined\BibAnnote\long\def\BibAnnote#1{}\else\fi"    write$ newline$
-  "\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi"    write$ newline$
+  "\ifx\undefined\BibEmph\def\BibEmph#1{#1}\else\fi"    write$ newline$
   preamble$ empty$
     'skip$
     { preamble$ write$ newline$ }
