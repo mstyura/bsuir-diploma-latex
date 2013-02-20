@@ -504,7 +504,7 @@ FUNCTION {bbl.ppage}  %   { "\bblP." }
 {  curlanguage "english" =
     {"P."}
     { curlanguage "ukrainian" = curlanguage "russian" = or
-           {"{С.}"}
+           {"{с.}"}
            {"language is not defined: " language  "P." * * warning$ "P."}
       if$}
   if$
@@ -818,7 +818,7 @@ FUNCTION {format.pages}
     { "" }
     { pages multi.page.check
         { bbl.ppages pages n.dashify tie.connect }
-        { bbl.ppage pages tie.connect }
+        { pages bbl.ppage tie.connect }
       if$
     }
   if$
