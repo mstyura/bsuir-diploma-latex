@@ -399,11 +399,11 @@ FUNCTION {bbl.of}      %  { "\bblof{}" }
 
 FUNCTION {bbl.etal}      %  { "\bblof{}" }
 {  curlanguage "english" =
-    {"et~al."}
+    {"[et~al.]"}
     { curlanguage "ukrainian" =
-        {"{та~ін.}"}
+        {"{[та~ін.]}"}
         { curlanguage "russian" =
-           {"{и~др.}"}
+           {"{[и~др.]}"}
            {"language is not defined: " language  "at al" * * warning$ "at al."}
          if$}
       if$}
@@ -535,7 +535,7 @@ FUNCTION {format.names.rev}
       format.name$ 't :=
       nameptr #1 >
         {
-          nameptr #4 =
+          nameptr #2 =
           numnames #4 > and
             { "others" 't :=
               #1 'namesleft := }
