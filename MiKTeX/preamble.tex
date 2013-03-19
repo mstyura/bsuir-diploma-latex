@@ -49,7 +49,7 @@
 % Почему: Пункт 2.1.1 Требований по оформлению пояснительной записки.
 \usepackage[nodisplayskipstretch]{setspace} 
 \setstretch{1.1}
-
+%\onehalfspacing
 
 % Зачем: Выбор шрифта по-умолчанию. 
 % Почему: Пункт 2.1.1 Требований по оформлению пояснительной записки.
@@ -162,7 +162,128 @@
     {\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
 \makeatother
 
+
 % Зачем: Задает стиль библиографии
 % Почему: Пункт 2.8.6 Требований по оформлению пояснительной записки.
 \bibliographystyle{styles/belarus-specific-utf8gost780u}
 
+
+% Зачем: Пакет для вставки картинок
+% Примечание: Объяснение, зачем final - http://tex.stackexchange.com/questions/11004/why-does-the-image-not-appear
+\usepackage[final]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+% Зачем: Директория в которой будет происходить поиск картинок
+\graphicspath{{figures/}}
+
+
+% Зачем: Добавление подписей к рисункам
+\usepackage[nooneline]{caption}
+\usepackage{subcaption}
+
+% Зачем: Задание подписей, разделителя и нумерации частей рисунков
+% Почему: Пункт 2.5.5 Требований по оформлению пояснительной записки.
+\DeclareCaptionLabelFormat{stbfigure}{Рисунок #2}
+\DeclareCaptionLabelFormat{stbtable}{Таблица #2}
+\DeclareCaptionLabelSeparator{stb}{~--~}
+\captionsetup{labelsep=stb}
+\captionsetup[figure]{labelformat=stbfigure,justification=centering}
+\captionsetup[table]{labelformat=stbtable,justification=raggedright}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+
+
+% Зачем: Удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др
+\usepackage{amsmath}
+
+
+% Зачем: Поддержка ажурного и готического шрифтов 
+\usepackage{amsfonts}
+
+
+% Зачем: amsfonts + несколько сотен дополнительных математических символов
+\usepackage{amssymb}
+
+
+% Зачем: Окружения «теорема», «лемма»
+\usepackage{amsthm}
+
+
+% Зачем: Производить арифметические операции во время компиляции TeX файла
+\usepackage{calc}
+
+% Зачем: Производить арифметические операции во время компиляции TeX файла
+\usepackage{fp}
+
+% Зачем: Пакет для работы с перечислениями
+\usepackage{enumitem}
+\makeatletter
+ \AddEnumerateCounter{\asbuk}{\@asbuk}{щ)}
+\makeatother
+
+
+% Зачем: Устанавливает символ начала простого перечисления
+% Почему: Пункт 2.3.5 Требований по оформлению пояснительной записки.
+\setlist{nolistsep}
+\renewcommand{\labelitemi}{--}
+
+
+% Зачем: Устанавливает символ начала именованного перечисления
+% Почему: Пункт 2.3.8 Требований по оформлению пояснительной записки.
+\renewcommand{\labelenumi}{\asbuk{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+
+% Зачем: Устанавливает отступ от границы документа до символа списка, чтобы этот отступ равнялся отступу параграфа
+% Почему: Пункт 2.3.5 Требований по оформлению пояснительной записки.
+\setlist[itemize,0]{itemindent=\parindent + 2.2ex,leftmargin=0ex}
+\setlist[enumerate,0]{itemindent=\parindent + 2.7ex,leftmargin=0ex}
+
+% Зачем: Включение номера раздела в номер формулы. Нумерация формул внутри раздела.
+\makeatletter
+\@addtoreset{equation}{section}
+\renewcommand\theequation{%
+  \ifnum \c@section>\z@ \thesection.\fi\@arabic\c@equation}
+\makeatother
+
+
+% Зачем: Включение номера раздела в номер таблицы. Нумерация таблиц внутри раздела.
+\makeatletter
+\@addtoreset{table}{section}
+\renewcommand\thetable{%
+  \ifnum \c@section>\z@\thesection.\fi\@arabic\c@table}
+\makeatother
+
+% Зачем: Включение номера раздела в номер рисунка. Нумерация рисунков внутри раздела.
+\makeatletter
+\@addtoreset{figure}{section}
+\renewcommand\thefigure{%
+  \ifnum \c@section>\z@\thesection.\fi \@arabic\c@figure}
+\makeatother
+
+
+% Зачем: Дополнительные возможности в форматировании таблиц
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{array}
+
+
+% Зачем: "Умная" запятая в математических формулах. В дробных числах не добавляет пробел
+% Почему: В требованиях не нашел, но в русском языке для дробных чисел используется {,} а не {.}
+\usepackage{icomma}
+
+% Зачем: макрос для печати римских чисел
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+% Зачем: Управление выводом чисел.
+\usepackage{sistyle}
+\SIdecimalsign{,}
+
+% Зачем: inline-коментирование содержимого.
+\newcommand{\ignore}[2]{\hspace{0in}#2}
+
+% Зачем: Возможность коментировать большие участки документа
+\usepackage{verbatim}
