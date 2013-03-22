@@ -225,7 +225,6 @@
 % Зачем: Устанавливает символ начала простого перечисления
 % Почему: Пункт 2.3.5 Требований по оформлению пояснительной записки.
 \setlist{nolistsep}
-\renewcommand{\labelitemi}{--}
 
 
 % Зачем: Устанавливает символ начала именованного перечисления
@@ -235,30 +234,19 @@
 
 % Зачем: Устанавливает отступ от границы документа до символа списка, чтобы этот отступ равнялся отступу параграфа
 % Почему: Пункт 2.3.5 Требований по оформлению пояснительной записки.
-\setlist[itemize,0]{itemindent=\parindent + 2.2ex,leftmargin=0ex}
-\setlist[enumerate,0]{itemindent=\parindent + 2.7ex,leftmargin=0ex}
+
+\setlist[itemize,0]{itemindent=\parindent + 2.2ex,leftmargin=0ex,label=--}
+\setlist[enumerate,1]{itemindent=\parindent + 2.7ex,leftmargin=0ex}
+\setlist[enumerate,2]{itemindent=\parindent + \parindent - 2.7ex}
 
 % Зачем: Включение номера раздела в номер формулы. Нумерация формул внутри раздела.
-\makeatletter
-\@addtoreset{equation}{section}
-\renewcommand\theequation{%
-  \ifnum \c@section>\z@ \thesection.\fi\@arabic\c@equation}
-\makeatother
-
+\AtBeginDocument{\numberwithin{equation}{section}}
 
 % Зачем: Включение номера раздела в номер таблицы. Нумерация таблиц внутри раздела.
-\makeatletter
-\@addtoreset{table}{section}
-\renewcommand\thetable{%
-  \ifnum \c@section>\z@\thesection.\fi\@arabic\c@table}
-\makeatother
+\AtBeginDocument{\numberwithin{table}{section}}
 
 % Зачем: Включение номера раздела в номер рисунка. Нумерация рисунков внутри раздела.
-\makeatletter
-\@addtoreset{figure}{section}
-\renewcommand\thefigure{%
-  \ifnum \c@section>\z@\thesection.\fi \@arabic\c@figure}
-\makeatother
+\AtBeginDocument{\numberwithin{figure}{section}}
 
 
 % Зачем: Дополнительные возможности в форматировании таблиц
@@ -285,5 +273,45 @@
 % Зачем: inline-коментирование содержимого.
 \newcommand{\ignore}[2]{\hspace{0in}#2}
 
+
 % Зачем: Возможность коментировать большие участки документа
 \usepackage{verbatim}
+
+
+\usepackage{xcolor}
+
+
+% Зачем: Оформление листингов кода
+% Примечание: final нужен для переопределения режима draft, в котором листинги не выводятся в документ.
+\usepackage[final]{listings}
+
+
+% Зачем: настройка оформления листинга для языка F#
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{turqusnumbers}{rgb}{0.17,0.57,0.69}
+\definecolor{redstrings}{rgb}{0.5,0,0}
+
+\renewcommand{\lstlistingname}{Листинг}
+
+\lstdefinelanguage{FSharp}
+    {morekeywords={abstract,and,as,assert,base,begin,class,default,delegate,do,done,downcast,downto,elif,else,end,exception,extern,false,finally,for,fun,function,global,if,in,inherit,inline,interface,internal,lazy,let,let!,match,member,module,mutable,namespace,new,not,null,of,open,or,override,private,public,rec,return,return!,select,static,struct,then,to,true,try,type,upcast,use,use!,val,void,when,while,with,yield,yield!,asr,land,lor,lsl,lsr,lxor,mod,sig,atomic,break,checked,component,const,constraint,constructor,continue,eager,event,external,fixed,functor,include,method,mixin,object,parallel,process,protected,pure,sealed,tailcall,trait,virtual,volatile},
+    keywordstyle=\bfseries\color{bluekeywords},
+    sensitive=false,
+    morecomment=[l][\color{greencomments}]{///},
+    morecomment=[l][\color{greencomments}]{//},
+    morecomment=[s][\color{greencomments}]{{(*}{*)}},
+    morestring=[b]",
+    stringstyle=\color{redstrings},
+    }
+
+\lstdefinestyle{fsharpstyle}{
+   xleftmargin=1ex,
+   language=FSharp,
+   basicstyle=\footnotesize\ttfamily,
+   breaklines=true,
+   columns=fullflexible
+}
+
+% Зачем: Нумерация листингов в пределах секции
+\AtBeginDocument{\numberwithin{lstlisting}{section}}
