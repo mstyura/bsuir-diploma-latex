@@ -306,12 +306,26 @@
     }
 
 \lstdefinestyle{fsharpstyle}{
-   xleftmargin=1ex,
+   xleftmargin=0ex,
    language=FSharp,
    basicstyle=\footnotesize\ttfamily,
    breaklines=true,
    columns=fullflexible
 }
+
+\lstdefinestyle{csharpinlinestyle} {
+  language=[Sharp]C,
+  morekeywords={yield,var,get,set,from,select,partial,where,async,await},
+  breaklines=true,
+  columns=fullflexible,
+  basicstyle=\footnotesize\ttfamily
+}
+
+\lstdefinestyle{csharpstyle}{
+  language=[Sharp]C,
+  frame=lr,
+  rulecolor=\color{blue!80!black}}
+
 
 % Зачем: Нумерация листингов в пределах секции
 \AtBeginDocument{\numberwithin{lstlisting}{section}}
