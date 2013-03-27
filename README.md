@@ -5,9 +5,10 @@
 
 
 # Рекомендации
-Рекомендуемый дистрибутив LaTeX для Windows [MiKTeX](http://miktex.org/).
-Рекомендуемый редактор [Sublime Text 2](http://www.sublimetext.com/2) вместе с [менеджером пакетов](http://wbond.net/sublime_packages/package_control) и установленным пакетом [LaTeXTools](https://github.com/SublimeText/LaTeXTools) и PDF просмотрщиком [SumatraPDF](http://blog.kowalczyk.info/software/sumatrapdf/free-pdf-reader.html).
-Рекомендуемые справочные пособия по вопросам связанным с LaTeX: [Bing](http://bing.com/?mkt=en-us), [Google](http://google.com), [Yandex](http://ya.ru) и книги.
+*Рекомендуемый дистрибутив LaTeX для Windows [MiKTeX](http://miktex.org/).
+*Рекомендуемый редактор [Sublime Text 2](http://www.sublimetext.com/2) вместе с [менеджером пакетов](http://wbond.net/sublime_packages/package_control) и установленным пакетом [LaTeXTools](https://github.com/SublimeText/LaTeXTools) и PDF просмотрщиком [SumatraPDF](http://blog.kowalczyk.info/software/sumatrapdf/free-pdf-reader.html).
+*Рекомендуемые справочные пособия по вопросам связанным с LaTeX: [Bing](http://bing.com/?mkt=en-us), [Google](http://google.com), [Yandex](http://ya.ru) и книги.
+*Рекомендуемая программа для ведения библиографической базы данных: [JabRef](http://jabref.sourceforge.net/)
 
 # Пример
 Очень черновой пример содержимого документа находится в файле document_content.tex, скомпилированный в pdf результат смотри в example.pdf
