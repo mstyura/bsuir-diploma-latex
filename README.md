@@ -9,6 +9,7 @@
 * Рекомендуемый редактор [Sublime Text 2](http://www.sublimetext.com/2) вместе с [менеджером пакетов](http://wbond.net/sublime_packages/package_control) и установленным пакетом [LaTeXTools](https://github.com/SublimeText/LaTeXTools) и PDF просмотрщиком [SumatraPDF](http://blog.kowalczyk.info/software/sumatrapdf/free-pdf-reader.html).
 * Рекомендуемые справочные пособия по вопросам связанным с LaTeX: [Bing](http://bing.com/?mkt=en-us), [Google](http://google.com), [Yandex](http://ya.ru) и книги.
 * Рекомендуемая программа для ведения библиографической базы данных: [JabRef](http://jabref.sourceforge.net/)
+* Инструкция по установке русского Times New Roman из пакета pscyr находится [здесь](http://plumbum-blog.blogspot.com/2010/06/miktex-28-pscyr-04d.html)
 
 # Пример
 Очень черновой пример содержимого документа находится в файле document_content.tex, скомпилированный в pdf результат смотри в [example.pdf](https://github.com/mstyura/bsuir-diploma-latex/blob/master/example.pdf)
@@ -21,3 +22,6 @@
 Многое, наверное, сделано некрасиво и не правильно с точки зрения LaTeX, но я пока новичок и только учусь.
 __Первоначальная компиляция проекта может занять некоторое время, т.к. должны установиться пакеты, используемые в preamble.tex__.
 Для диагностики неисправности рекомендуется посмотреть генерируемый log файл или запустить компиляцию из командной строки с помощью pdflatex.
+
+# Помощь
+Описания назначений фалов можно прочитать в [вики](wiki/Описание файлов).
