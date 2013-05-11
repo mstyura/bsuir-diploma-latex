@@ -162,6 +162,18 @@
     {\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
 \makeatother
 
+% Зачем: для оформления введения и заключения, они должны быть выровнены по центру.
+% Почему: Пункты 1.1.15 и 1.1.11 Требований по оформлению пояснительной записки.
+\makeatletter
+\newcommand\sectioncentered{%
+  \clearpage\@startsection {section}{1}%
+    {\z@}%
+    {-1em \@plus -1ex \@minus -.2ex}%
+    {1em \@plus .2ex}%
+    {\centering\hyphenpenalty=10000\normalfont\large\bfseries\MakeUppercase}}
+\makeatother
+
+
 
 % Зачем: Задает стиль библиографии
 % Почему: Пункт 2.8.6 Требований по оформлению пояснительной записки.
@@ -171,7 +183,7 @@
 % Зачем: Пакет для вставки картинок
 % Примечание: Объяснение, зачем final - http://tex.stackexchange.com/questions/11004/why-does-the-image-not-appear
 \usepackage[final]{graphicx}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
 
 
 % Зачем: Директория в которой будет происходить поиск картинок
@@ -331,3 +343,5 @@
 \AtBeginDocument{\numberwithin{lstlisting}{section}}
 
 \usepackage[normalem]{ulem}
+
+%\usepackage[final,hidelinks]{hyperref}
