@@ -1,6 +1,7 @@
 % Зачем: Изменение надписи для списка литературы
 % Почему: Пункт 2.8.1 Требований по оформлению пояснительной записки.
-\renewcommand\bibname{\bfseries\normalsize\centerline{\MakeUppercase{список использованных источников}}}
+\renewcommand{\bibsection}{\sectioncentered*{Cписок использованных источников}}
+\addcontentsline{toc}{section}{Cписок использованных источников}
 
 % Зачем: Печать списка литературы. База данных литературы - файл bibliography_database.bib
 \bibliography{bibliography_database}

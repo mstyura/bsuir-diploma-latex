@@ -11,6 +11,7 @@ $(PDFNAME).pdf: *.tex
 	while $(GREP) 'Label(s) may have changed' $(PDFNAME).log > NUL 2>&1 ; do \
 		$(PDFLATEX) $(PDFNAME) ; \
 	done
+	cp $(PDFNAME).pdf ../example.pdf
 
 cleanall: clean
 	$(RM) *.bbl *.pdf *.gz *.gz(busy) *.blg
