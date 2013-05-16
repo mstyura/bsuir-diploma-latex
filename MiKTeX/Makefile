@@ -1,5 +1,6 @@
 SHELL=%WINDIR%/cmd.exe
 PDFLATEX = pdflatex
+BIBTEX = bibtex
 PDFNAME = diploma_report
 RM = rm -f
 GREP = grep
@@ -8,9 +9,9 @@ all: $(PDFNAME).pdf
 
 $(PDFNAME).pdf: *.tex
 	$(PDFLATEX) $(PDFNAME)
-	while $(GREP) 'Label(s) may have changed' $(PDFNAME).log > NUL 2>&1 ; do \
-		$(PDFLATEX) $(PDFNAME) ; \
-	done
+	$(BIBTEX) $(PDFNAME).aux
+	$(PDFLATEX) $(PDFNAME)
+	$(PDFLATEX) $(PDFNAME)
 	cp $(PDFNAME).pdf ../example.pdf
 
 cleanall: clean
