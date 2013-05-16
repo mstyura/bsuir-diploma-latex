@@ -1,7 +1,7 @@
 SHELL=%WINDIR%/cmd.exe
 PDFLATEX = pdflatex
 BIBTEX = bibtex
-PDFNAME = diploma_report
+PDFNAME = main_example
 RM = rm -f
 GREP = grep
 
