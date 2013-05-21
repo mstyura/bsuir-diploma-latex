@@ -346,6 +346,8 @@
 \usepackage[normalem]{ulem}
 
 \usepackage[final,hidelinks]{hyperref}
+% Моноширинный шрифт выглядит визуально больше, чем пропорциональный шрифт, если их размеры одинаковы. Искусственно уменьшаем размер ссылок.
+\renewcommand{\UrlFont}{\small\rmfamily\tt}
 
 \usepackage[square,numbers,sort&compress]{natbib}
 \setlength{\bibsep}{0em}
