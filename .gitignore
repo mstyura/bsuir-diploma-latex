@@ -33,3 +33,4 @@
 *.pdf
 *.gz*
 !example.pdf
+!document_list.pdf
