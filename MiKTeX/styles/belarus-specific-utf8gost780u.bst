@@ -630,11 +630,16 @@ FUNCTION {format.date}
   if$
 }
 
+FUNCTION {format.address} 
+{
+  address "~" *
+}
+
 FUNCTION {output.address.publisher.date}
 {
       address empty$
         'skip$
-        { address output
+        { format.address output
           publisher empty$
             'skip$
             { new.column
