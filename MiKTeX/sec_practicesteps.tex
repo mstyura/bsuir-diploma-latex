@@ -1,0 +1,32 @@
+\section{Этапы выполнения задания}
+\label{sec:practice:task_steps}
+
+\begin{enumerate}
+  \item Подготовительный этап
+  \begin{enumerate}
+    \item разработка формальных требований;
+    \item разработка архитектуры приложения;
+    \item изучение документации по Apple Push Notification Service.
+  \end{enumerate}
+  
+  \item Этап реализации
+  \begin{enumerate}
+    \item разработка библиотеки отправки уведомлений, язык \csharp{};
+    \item разработка сервиса, предоставляющего функции отсылки уведомлений, язык \csharp{};
+    \item разработка эмулятора Apple Push Notification Service, язык \fsharp{}.
+  \end{enumerate}
+
+  \item Этап тестирования
+  \begin{enumerate}
+    \item тестирования корректности работы сервиса;
+    \item тестирование производительности сервиса при работе с эмулятором и с реальным APNS"=сервисом;
+    \item тестирование клиентов, работающих с разработанным сервисом;
+    \item интеграционное тестирование цепочки <<серверное приложение>> "--- <<разработанный сервис>> "--- <<Apple Push Notification Service>> "--- <<FOREXTrader for iPhone\texttrademark>>.
+  \end{enumerate}
+
+  \item Этап развертывания
+  \begin{enumerate}
+    \item развертывание сервиса в среде заказчика.
+  \end{enumerate}
+\end{enumerate}
+

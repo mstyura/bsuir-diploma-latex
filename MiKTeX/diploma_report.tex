@@ -1,0 +1,30 @@
+\input{preamble}
+
+\input{macro_glob}
+
+\begin{document}
+
+\input{diploma_title} % page 1
+
+\input{abstract} % page 2
+
+%\input{diploma_task} % pages 3 and 4. printed separately
+
+\input{annotation} % not part of report
+
+%\input{feedback} % not part of report
+
+%\input{review} % not part of report
+
+\setcounter{page}{5}
+
+\input{table_of_contents}
+
+\input{diploma_content}
+
+\input{references}
+
+% Ведомость документов, сделана в Visio, сохранена в pdf
+\includepdf[pages={-}]{documents_list.pdf}
+
+\end{document}

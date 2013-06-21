@@ -1,7 +1,7 @@
 % !TeX spellcheck = russian-aot-ieyo
 % Зачем: Определяет класс документа (То, как будет выглядеть документ)
 % Примечание: параметр draft помечает строки, вышедшие за границы страницы, прямоугольником, в фильной версии его нужно удалить.
-\documentclass[a4paper,14pt,russian,oneside,draft]{extreport}
+\documentclass[a4paper,14pt,russian,oneside,final]{extreport}
 
 % Зачем: Установка кодировки исходных файлов.
 \usepackage[utf8]{inputenc}
@@ -60,11 +60,6 @@
 % Зачем: Отключает использование изменяемых межсловных пробелов.
 % Почему: Так не принято делать в текстах на русском языке.
 \frenchspacing
-
-
-% Зачем: Счетчик страниц начинается с 3. Пропускается титульный лист, лист с рефератом и лист технического задания.
-% Почему: Пункт 2.2.8 Требований по оформлению пояснительной записки.
-\setcounter{page}{3}
 
 
 % Зачем: Сброс счетчика сносок для каждой страницы
@@ -388,8 +383,10 @@
 \pretocmd{\section}{\addtocounter{totequation}{\value{equation}}\setcounter{equation}{0}}{}{}
 \pretocmd{\bibitem}{\addtocounter{totreferences}{1}}{}{}
 
+
+
 % Для оформления таблиц не влязящих на 1 страницу
 \usepackage{longtable}
 
 % Для включения pdf документов в результирующий файл
-\usepackage[final]{pdfpages}
+\usepackage{pdfpages}
