@@ -1,4 +1,10 @@
-SHELL=%WINDIR%/cmd.exe
+ifeq ($(OS),Windows_NT)
+	SHELL=%WINDIR%/cmd.exe
+	DROPBOX_PUBLIC=$(USERPROFILE)/Dropbox/Public
+else
+	SHELL=/usr/bin/env sh
+	DROPBOX_PUBLIC=$(HOME)/Dropbox/Public
+endif
 PDFLATEX = pdflatex
 DIPLOMA_REPORT_PDF = diploma_report
 PRACTICE_REPORT_PDF = practice_report
@@ -7,7 +13,6 @@ TASK_PDF = diploma_task_only
 BIBTEX = bibtex
 RM = rm -f
 GREP = grep
-DROPBOX_PUBLIC=$(USERPROFILE)/Dropbox/Public
 
 all: $(DIPLOMA_REPORT_PDF).pdf $(PRACTICE_REPORT_PDF).pdf $(TITLE_PDF).pdf $(TASK_PDF).pdf
 
