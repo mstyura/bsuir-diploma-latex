@@ -32,6 +32,7 @@
 *.tdo
 *.pdf
 *.gz*
+*~
 !example_diploma.pdf
 !example_practice.pdf
 !document_list.pdf
