@@ -12,7 +12,7 @@
 * Инструкция по установке русского Times New Roman из пакета pscyr находится [здесь](http://plumbum-blog.blogspot.com/2010/06/miktex-28-pscyr-04d.html)
 
 # Пример
-В качестве пример приведены моя пояснительная записка к дипломному проекту [example_diploma.pdf](https://github.com/mstyura/bsuir-diploma-latex/blob/master/example_diploma.pdf)
+В качестве примера приведены моя пояснительная записка к дипломному проекту [example_diploma.pdf](https://github.com/mstyura/bsuir-diploma-latex/blob/master/example_diploma.pdf)
  и преддипломной практике [example_practice.pdf](https://github.com/mstyura/bsuir-diploma-latex/blob/master/example_practice.pdf).
 
 # Дальнейшее развитие
@@ -25,8 +25,8 @@ __Первоначальная компиляция проекта может з
 Для диагностики неисправности рекомендуется посмотреть генерируемый log файл или запустить компиляцию из командной строки с помощью pdflatex.
 
 # Помощь
-Описания назначений фалов можно прочитать в [вики](https://github.com/mstyura/bsuir-diploma-latex/wiki/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2).
+Описания назначений файлов можно прочитать в [вики](https://github.com/mstyura/bsuir-diploma-latex/wiki/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2).
 
 # UPD
 ~~После защиты дипломного проекта в качестве примера оформления вместо той каши из букв, которая в примерах сейчас, планирую выложить пояснительную записку от своего дипломного проекта.~~
-Сделано
+Сделано.
