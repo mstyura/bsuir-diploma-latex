@@ -200,6 +200,25 @@
 \captionsetup[table]{labelformat=stbtable,justification=raggedright}
 \renewcommand{\thesubfigure}{\asbuk{subfigure}}
 
+% Зачем: Окружения для оформления формул
+% Почему: Пункт 2.4.7 требований по оформлению пояснительной записки и специфические требования различных кафедр
+\usepackage{tabularx}
+
+\newenvironment{explanation}
+    {
+    %%% Следующие строки определяют специфические требования кафедр. Раскоменнтируйте нужные 2 строки
+    %% стандартный абзац, Кафедра информатики
+    \par 
+    \tabularx{\textwidth-\fivecharsapprox}{@{}ll@{ --- } X }
+    %% без отступа, Кафедра экономической информатики
+    %\noindent 
+    %\tabularx{\textwidth}{@{}ll@{ --- } X }
+    }
+    { 
+    \\[\parsep]
+    \endtabularx
+    }
+
 
 % Зачем: Удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др
 \usepackage{amsmath}
