@@ -411,7 +411,35 @@
 % Для включения pdf документов в результирующий файл
 \usepackage{pdfpages}
 
+% Для использования знака градуса и других знаков
+% http://ctan.org/pkg/gensymb
+\usepackage{gensymb}
+
 % Зачем: Переносы в словах с тире.
 % Тире в словае заменяем на \hyph: аппаратно\hyphпрограммный.
 % https://stackoverflow.com/questions/2193307/how-to-get-latex-to-hyphenate-a-word-that-contains-a-dash#
 \def\hyph{-\penalty0\hskip0pt\relax}
+
+% Добавляем левый отступ для библиографии
+% https://tex.stackexchange.com/questions/133253/leftmargin-problem-at-the-bibliography
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\sectioncentered*{Cписок использованных источников}
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \setlength{\itemindent}{\dimexpr\labelwidth+\labelsep+1em}
+            \leftmargin\z@
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
