@@ -193,8 +193,8 @@
 
 % Зачем: Задание подписей, разделителя и нумерации частей рисунков
 % Почему: Пункт 2.5.5 Требований по оформлению пояснительной записки.
-\DeclareCaptionLabelFormat{stbfigure}{Рисунок #2}
-\DeclareCaptionLabelFormat{stbtable}{Таблица #2}
+\DeclareCaptionLabelFormat{stbfigure}{Рисунок \emph{#2}}
+\DeclareCaptionLabelFormat{stbtable}{Таблица \emph{#2}}
 \DeclareCaptionLabelSeparator{stb}{~--~}
 \captionsetup{labelsep=stb}
 \captionsetup[figure]{labelformat=stbfigure,justification=centering}
