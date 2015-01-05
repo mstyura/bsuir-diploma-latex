@@ -191,6 +191,8 @@
 \usepackage[nooneline]{caption}
 \usepackage{subcaption}
 
+% Зачем: чтобы работала \No в новых латехах
+\DeclareRobustCommand{\No}{\ifmmode{\nfss@text{\textnumero}}\else\textnumero\fi}
 
 % Зачем: поворот ячеек таблиц на 90 градусов
 \usepackage{rotating}
