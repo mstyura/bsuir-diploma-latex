@@ -215,6 +215,27 @@
 
 % Зачем: Окружения для оформления формул
 % Почему: Пункт 2.4.7 требований по оформлению пояснительной записки и специфические требования различных кафедр
+% Пример использования смотри в course_content.tex, строка 5
+\usepackage{calc}
+\newlength{\lengthWordWhere}
+\settowidth{\lengthWordWhere}{где}
+\newenvironment{explanationx}
+    {
+    %%% Следующие строки определяют специфические требования кафедр. Раскоменнтируйте нужную строку
+    %% стандартный абзац, Кафедра информатики
+    \begin{itemize}[leftmargin=0cm, itemindent=\parindent + \lengthWordWhere + \labelsep, labelsep=\labelsep]
+
+    %% без отступа, Кафедра экономической информатики
+    %\begin{itemize}[leftmargin=0cm, itemindent=\lengthWordWhere + \labelsep , labelsep=\labelsep]
+
+    \renewcommand\labelitemi{}
+    }
+    {
+    \\[\parsep]
+    \end{itemize}
+    }
+
+% Старое окружение для "где". Сохранено для совместимости
 \usepackage{tabularx}
 
 \newenvironment{explanation}
