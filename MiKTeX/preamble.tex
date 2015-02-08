@@ -3,11 +3,19 @@
 % Примечание: параметр draft помечает строки, вышедшие за границы страницы, прямоугольником, в фильной версии его нужно удалить.
 \documentclass[a4paper,14pt,russian,oneside,final]{extreport}
 
-% Зачем: Улучшает отображение русских шрифтов.
+% Зачем: Предоставляет проприетарный Times New Roman.
+% ОБНОВЛЕНИЕ: лучше использовать scalable-cyrfonts-tex: меньше проблем с установкой
 % Из руководства к PSCyr: "Во избежание проблем пакет PSCyr должен загружаться перед пакета-ми inputenc и babel".
 % Примечание: Требует шаманства при установке, инструкция http://plumbum-blog.blogspot.com/2010/06/miktex-28-pscyr-04d.html
 % http://blog.harrix.org/?p=444
+% надо закомментировать это, чтобы использовать scalable-cyrfonts-tex:
 \usepackage{pscyr}
+
+% Зачем: Предоставляет свободный Times New Roman.
+% Шрифт идёт вместе с пакетом scalable-cyrfonts-tex в Ubuntu/Debian
+% раскомментировать, чтобы использовать scalable-cyrfonts-tex:
+%\usefont{T2A}{ftm}{m}{sl}
+
 
 % Зачем: Установка кодировки исходных файлов.
 \usepackage[utf8]{inputenc}
