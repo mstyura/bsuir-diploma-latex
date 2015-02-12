@@ -10,6 +10,8 @@
 * Рекомендуемые справочные пособия по вопросам связанным с LaTeX: [Bing](http://bing.com/?mkt=en-us), [Google](http://google.com), [Yandex](http://ya.ru) и книги.
 * Рекомендуемая программа для ведения библиографической базы данных: [JabRef](http://jabref.sourceforge.net/)
 * Инструкция по установке русского Times New Roman из пакета pscyr находится [здесь](http://plumbum-blog.blogspot.com/2010/06/miktex-28-pscyr-04d.html)
+* Если возникли **проблемы с pscyr**, то можно переключиться на использование **scalable-cyrfonts-tex**, с которым также могут быть проблемы при установке, но их **проще решить** (см. 
+[Wiki→Возникающие-ошибки](https://github.com/mstyura/bsuir-diploma-latex/wiki/Возникающие-ошибки#scalable-cyrfonts-tex-on-ubuntu))
 
 # Пример
 В качестве примера приведены моя пояснительная записка к дипломному проекту [example_diploma.pdf](https://github.com/mstyura/bsuir-diploma-latex/blob/master/example_diploma.pdf)
