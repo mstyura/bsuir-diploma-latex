@@ -229,12 +229,12 @@
 \settowidth{\lengthWordWhere}{где}
 \newenvironment{explanationx}
     {
-    %%% Следующие строки определяют специфические требования кафедр. Раскоменнтируйте нужную строку
-    %% стандартный абзац, Кафедра информатики
-    \begin{itemize}[leftmargin=0cm, itemindent=\parindent + \lengthWordWhere + \labelsep, labelsep=\labelsep]
+    %%% Следующие строки определяют специфические требования разных редакций стандартов. Раскоменнтируйте нужную строку
+    %% стандартный абзац, СТП-01 2010
+    %\begin{itemize}[leftmargin=0cm, itemindent=\parindent + \lengthWordWhere + \labelsep, labelsep=\labelsep]
 
-    %% без отступа, Кафедра экономической информатики
-    %\begin{itemize}[leftmargin=0cm, itemindent=\lengthWordWhere + \labelsep , labelsep=\labelsep]
+    %% без отступа, СТП-01 2013
+    \begin{itemize}[leftmargin=0cm, itemindent=\lengthWordWhere + \labelsep , labelsep=\labelsep]
 
     \renewcommand\labelitemi{}
     }
@@ -248,13 +248,13 @@
 
 \newenvironment{explanation}
     {
-    %%% Следующие строки определяют специфические требования кафедр. Раскоменнтируйте нужные 2 строки
-    %% стандартный абзац, Кафедра информатики
-    \par 
-    \tabularx{\textwidth-\fivecharsapprox}{@{}ll@{ --- } X }
-    %% без отступа, Кафедра экономической информатики
-    %\noindent 
-    %\tabularx{\textwidth}{@{}ll@{ --- } X }
+    %%% Следующие строки определяют специфические требования разных редакций стандартов. Раскоменнтируйте нужные 2 строки
+    %% стандартный абзац, СТП-01 2010
+    %\par 
+    %\tabularx{\textwidth-\fivecharsapprox}{@{}ll@{ --- } X }
+    %% без отступа, СТП-01 2013
+    \noindent 
+    \tabularx{\textwidth}{@{}ll@{ --- } X }
     }
     { 
     \\[\parsep]
