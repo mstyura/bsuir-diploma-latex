@@ -48,15 +48,8 @@ $(COURSE_REPORT_PDF).pdf: *.tex
 
 $(TITLE_PDF).pdf: *.tex
 	$(PDFLATEX) $(TITLE_PDF)
-	$(BIBTEX) $(TITLE_PDF).aux
-	$(PDFLATEX) $(TITLE_PDF)
-	$(PDFLATEX) $(TITLE_PDF)
-
 
 $(TASK_PDF).pdf: *.tex
-	$(PDFLATEX) $(TASK_PDF)
-	$(BIBTEX) $(TASK_PDF).aux
-	$(PDFLATEX) $(TASK_PDF)
 	$(PDFLATEX) $(TASK_PDF)
 
 
