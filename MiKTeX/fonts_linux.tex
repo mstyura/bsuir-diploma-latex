@@ -1,0 +1,13 @@
+% Зачем: Выбор внутренней TeX кодировки.
+\usepackage[T2A]{fontenc}
+
+% Зачем: Предоставляет свободный Times New Roman.
+% Шрифт идёт вместе с пакетом scalable-cyrfonts-tex в Ubuntu/Debian
+
+% пакет scalable-cyrfonts-tex может конфликтовать с texlive-fonts-extra в Ubuntu
+% решение: Для себя я решил эту проблему так: пересобрал пакет scalable-cyrfonts-tex, изменив его имя. Решение топорное, но работает. Желающие могут скачать мой пакет здесь:
+% https://yadi.sk/d/GW2PhDgEcJH7m
+% Установка:
+% dpkg -i scalable-cyrfonts-tex-shurph_4.16_all.deb
+
+\usefont{T2A}{ftm}{m}{sl}
