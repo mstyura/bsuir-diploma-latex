@@ -33,6 +33,7 @@
 *.pdf
 *.gz*
 *~
+.vagrant/
 !example_diploma.pdf
 !example_practice.pdf
 !document_list.pdf
