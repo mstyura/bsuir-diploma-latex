@@ -23,6 +23,18 @@ publish_to_dropbox: all
 	cp $(DIPLOMA_REPORT_PDF).pdf $(DROPBOX_PUBLIC)/$(DIPLOMA_REPORT_PDF).pdf
 	cp $(PRACTICE_REPORT_PDF).pdf $(DROPBOX_PUBLIC)/$(PRACTICE_REPORT_PDF).pdf
 
+fast: *.tex
+	latexmk -pdf -pdflatex="pdflatex" $(DIPLOMA_REPORT_PDF)
+	mv $(DIPLOMA_REPORT_PDF).pdf $(DIPLOMA_REPORT_PDF)-`date +'%m-%d-%H-%M-%S'`.pdf
+
+fastcheck: *.tex
+	$(PDFLATEX) $(DIPLOMA_REPORT_PDF)
+	$(BIBTEX) $(DIPLOMA_REPORT_PDF).aux
+	$(PDFLATEX) $(DIPLOMA_REPORT_PDF)
+	$(PDFLATEX) $(DIPLOMA_REPORT_PDF)
+	mv $(DIPLOMA_REPORT_PDF).pdf $(DIPLOMA_REPORT_PDF)-`date +'%m-%d-%H-%M-%S'`.pdf
+
+
 $(DIPLOMA_REPORT_PDF).pdf: *.tex
 	$(PDFLATEX) $(DIPLOMA_REPORT_PDF)
 	$(BIBTEX) $(DIPLOMA_REPORT_PDF).aux
