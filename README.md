@@ -28,6 +28,7 @@
 
 ### Windows (MiKTeX)
 - см. выше список рекомендаций
+- раскомментировать строку `\input{fonts_windows}` в файле `preamble.tex` (и закомментировать строку `\input{fonts_linux}`)
 
 
 # Пример
