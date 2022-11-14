@@ -26,6 +26,13 @@
 - установить модифицированный [scalable-cyrfonts-tex (ссылка на скачивание)](https://yadi.sk/d/GW2PhDgEcJH7m): `sudo dpkg -i scalable-cyrfonts-tex-shurph_4.16_all.deb`
 - можно приступать к сборке проекта
 
+### Linux, Arch (TeX Live)
+- установить make: `sudo pacman -S make`
+- установить пакеты texlive: `sudo pacman -S texlive-bin texlive-core texlive-langcyrillic`
+- используя [yay](https://github.com/Jguer/yay) поставить из AUR tllocalmgr и texlive-pscyr: `yay -S tllocalmgr texlive-pscyr`
+- установить через tllocalmgr sistyle: `tllocalmgr install sistyle`
+- можно приступать к сборке
+
 ### Windows (MiKTeX)
 - см. выше список рекомендаций
 - раскомментировать строку `\input{fonts_windows}` в файле `preamble.tex` (и закомментировать строку `\input{fonts_linux}`)
