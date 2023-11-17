@@ -23,8 +23,11 @@ publish_to_dropbox: all
 	cp $(DIPLOMA_REPORT_PDF).pdf $(DROPBOX_PUBLIC)/$(DIPLOMA_REPORT_PDF).pdf
 	cp $(PRACTICE_REPORT_PDF).pdf $(DROPBOX_PUBLIC)/$(PRACTICE_REPORT_PDF).pdf
 
+watch: *.tex
+	latexmk -pdf -pdflatex="$(PDFLATEX)" -pvc $(DIPLOMA_REPORT_PDF)
+
 fast: *.tex
-	latexmk -pdf -pdflatex="pdflatex" $(DIPLOMA_REPORT_PDF)
+	latexmk -pdf -pdflatex="$(PDFLATEX)" $(DIPLOMA_REPORT_PDF)
 	mv $(DIPLOMA_REPORT_PDF).pdf $(DIPLOMA_REPORT_PDF)-`date +'%m-%d-%H-%M-%S'`.pdf
 
 fastcheck: *.tex
